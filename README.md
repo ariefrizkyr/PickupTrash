@@ -1,2 +1,4 @@
 # Sisaku
-### Aplikasi untuk penjemputan sampah plastik. Dibuat oleh [Arief R Ramadhan](https://ariefrizky.com).
+### Dikembangkan oleh [Arief R Ramadhan](https://ariefrizky.com)
+
+Aplikasi untuk penjemputan dan bank sampah plastik.
