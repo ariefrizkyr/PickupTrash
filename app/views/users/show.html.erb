@@ -8,3 +8,5 @@ Bank details <br>
 <%= @user.profile.bank_name %><br>
 <%= @user.profile.account_name %><br>
 <%= @user.profile.account_number %>
+<hr>
+<%= link_to 'Edit Profile', edit_user_profile_path(current_user), class: 'btn btn-primary' %>
