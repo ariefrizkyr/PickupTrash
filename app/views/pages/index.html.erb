@@ -2,5 +2,8 @@
   <% if current_user.profile.blank? %>
     <%= link_to 'Create Profile', new_user_profile_path(current_user) %>
   <% end %>
+
+  <%= link_to 'Create Order', new_order_path, class: 'btn btn-primary' %>
+
 <% end %>
 <h1>This is temp homepage</h1>

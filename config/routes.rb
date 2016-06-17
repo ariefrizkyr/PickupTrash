@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root 'pages#index'
+  
+  get '/pricing' => 'pages#pricing'
+  get '/termofuse' => 'pages#term'
 
   devise_for :users
   devise_for :admins
@@ -8,6 +11,5 @@ Rails.application.routes.draw do
     resource :profile
   end
 
-  get '/pricing' => 'pages#pricing'
-  get '/termofuse' => 'pages#term'
+  resources :orders, only: [:index, :show, :new, :create]
 end

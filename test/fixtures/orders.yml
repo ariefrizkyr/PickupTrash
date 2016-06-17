@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyText
+  direction: MyText
+  phone_number: MyString
+  status: false
+  price: 1
+  weight: 9.99
+  user_id: 
+  admin_id: 
+
+two:
+  address: MyText
+  direction: MyText
+  phone_number: MyString
+  status: false
+  price: 1
+  weight: 9.99
+  user_id: 
+  admin_id: 
