@@ -1,3 +1,5 @@
+Saldo Anda adalah: <%= @orders.sum(:price) - @withdraws.sum(:amount) %><br>
+Anda telah berkontribusi sebanyak <%= @orders.sum(:weight) %> kg<br>
 <%= image_tag @user.profile.avatar.url %><br>
 <%= @user.first_name %> <%= @user.last_name %><br>
 <%= @user.profile.address %><br>

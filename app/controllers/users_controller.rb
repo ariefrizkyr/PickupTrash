@@ -3,5 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @orders = Order.all
+    @withdraws = Withdraw.all
   end
 end
