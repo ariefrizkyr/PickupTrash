@@ -10,6 +10,7 @@ class UserDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     profile: Field::HasOne,
     orders: Field::HasMany,
+    withdraws: Field::HasMany,
     id: Field::Number,
     email: Field::String,
     encrypted_password: Field::String,
@@ -35,8 +36,8 @@ class UserDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :profile,
     :orders,
+    :withdraws,
     :id,
-    :email,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -44,6 +45,7 @@ class UserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :profile,
     :orders,
+    :withdraws,
     :id,
     :email,
     :encrypted_password,
@@ -67,6 +69,7 @@ class UserDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :profile,
     :orders,
+    :withdraws,
     :email,
     :encrypted_password,
     :reset_password_token,

@@ -8,10 +8,11 @@ Rails.application.routes.draw do
     resources :users
     resources :orders
     resources :profiles
+    resources :withdraws
 
     root to: "users#index"
   end
-
+  
   devise_for :users
 
   resources :users do
