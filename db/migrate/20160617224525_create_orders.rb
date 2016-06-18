@@ -8,7 +8,6 @@ class CreateOrders < ActiveRecord::Migration
       t.integer :price
       t.decimal :weight
       t.references :user, index: true, foreign_key: true
-      t.references :admin, index: true, foreign_key: true
 
       t.timestamps null: false
     end

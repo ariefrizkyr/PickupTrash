@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   before_action :find_order, only: [:show]
 
   def index
-
+     @orders = Order.all.order("created_at DESC")
   end
 
   def show

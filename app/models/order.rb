@@ -1,6 +1,5 @@
 class Order < ActiveRecord::Base
   belongs_to :user
-  belongs_to :admin
 
   validates :address, presence: true
   validates :direction, presence: true

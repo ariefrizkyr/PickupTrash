@@ -2,7 +2,6 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
   before_action :find_user
   before_action :find_profile, only: [:edit, :update]
-  before_action :only_current_user
 
   def new
     @profile = Profile.new
@@ -40,13 +39,6 @@ class ProfilesController < ApplicationController
 
     def find_profile
       @profile = @user.profile
-    end
-
-    def only_current_user
-      unless @profile.user_id == current_user.id
-        flash[:error] = 'Access denied'
-        redirect_to root_path
-      end
     end
 
     def profile_params
