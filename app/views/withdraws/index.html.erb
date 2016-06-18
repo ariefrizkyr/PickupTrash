@@ -1,0 +1,15 @@
+<% @withdraws.each do |withdraw| %>
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= withdraw.amount %><br>
+        <% if withdraw.status.present? %>
+          Telah dicairkan<br>
+        <% else %>
+          Sedang dalam proses<br>
+        <% end %>
+        <%= withdraw.created_at.strftime("%Y-%m-%d at %H:%M") %><br>
+      </div>
+    </div>
+  </div>
+<% end %>

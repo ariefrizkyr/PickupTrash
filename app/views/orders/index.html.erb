@@ -1,4 +1,4 @@
-Your balance : <%= @orders.sum(:price) %><br>
+Your balance : <%= @orders.sum(:price) - @withdraws.sum(:amount) %><br>
 
 <% @orders.each do |order| %>
   <div class="col-md-6 col-md-offset-3">
@@ -7,6 +7,18 @@ Your balance : <%= @orders.sum(:price) %><br>
         <%= order.address %><br>
         <%= order.direction %><br>
         <%= order.phone_number %><br>
+        <% if order.status.present? %>
+          Telah dijemput<br>
+        <% else %>
+          Sedang dalam proses<br>
+        <% end %>
+        <% if order.price.present? %>
+          <%= order.price %><br>
+        <% end %>
+        <% if order.weight.present? %>
+          <%= order.weight %><br>
+        <% end %>
+
         <%= order.created_at.strftime("%Y-%m-%d at %H:%M") %><br>
         <%= link_to 'View Detail', order, class: 'btn btn-primary' %>
       </div>

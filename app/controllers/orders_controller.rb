@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
   before_action :find_order, only: [:show]
 
   def index
+     @withdraws = Withdraw.all
      @orders = Order.all.order("created_at DESC")
   end
 
