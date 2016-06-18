@@ -1,4 +1,16 @@
 <%= @order.address %><br>
 <%= @order.direction %><br>
 <%= @order.phone_number %><br>
-<%= @order.created_at.strftime("%Y-%m-%d at %H:%M") %>
+<%= @order.created_at.strftime("%Y-%m-%d at %H:%M") %><br>
+
+<% if @order.status.present? %>
+  Finished<br>
+<% end %>
+
+<% if @order.weight.present? %>
+  <%= @order.weight %><br>
+<% end %>
+
+<% if @order.price.present? %>
+  <%= @order.price %><br>
+<% end %>
