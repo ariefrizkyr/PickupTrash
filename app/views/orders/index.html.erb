@@ -13,6 +13,8 @@
 
           <br>
 
+          <%= order.created_at.strftime("%Y-%m-%d at %H:%M") %><br>
+
           <% if order.price.present? %>
             <strong>Price:</strong> <%= order.price %><br>
           <% end %>
@@ -20,10 +22,14 @@
             <strong>Weight:</strong> <%= order.weight %><br>
           <% end %>
 
-          <%= order.created_at.strftime("%Y-%m-%d at %H:%M") %><br><br>
+          <br>
 
           <%= link_to 'View Detail', order, class: 'btn btn-success' %>
         </div>
+
+        <hr>
+
+        <%= link_to 'Back', root_path, class: 'btn btn-success' %>
       </div>
     </div>
   </div>
