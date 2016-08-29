@@ -14,7 +14,7 @@ class WithdrawsController < ApplicationController
 
     if @withdraw.save
       flash[:success] = "Withdraw request created!"
-      redirect_to orders_path
+      redirect_to witdraws_path
     else
       flash[:error] = "Error occured!"
       render :new
