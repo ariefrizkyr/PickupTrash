@@ -1,16 +1,16 @@
 <%= form_for @order do |f| %>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-6 col-md-offset-3 text-center">
       <div class="panel panel-default">
         <div class="panel-heading">
-            <h3>New Order</h3>
+            <h3>New Pickup</h3>
         </div>
 
         <div class="panel-body">
           <div class="row">
             <div class="col-sm-12">
               <div class="form-group">
-                <%= f.text_area :address, class: 'form-control' %>
+                <%= f.text_area :address, class: 'form-control', placeholder: 'Address' %>
               </div>
             </div>
           </div>
@@ -18,7 +18,7 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="form-group">
-                <%= f.text_area :direction, class: 'form-control' %>
+                <%= f.text_area :direction, class: 'form-control', placeholder: 'Direction (Berikan detail petunjuk arah menuju lokasi penjemputan)' %>
               </div>
             </div>
           </div>
@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="form-group">
-                <%= f.text_field :phone_number, class: 'form-control' %>
+                <%= f.text_field :phone_number, class: 'form-control', placeholder: 'Nomor HP' %>
               </div>
             </div>
           </div>
@@ -34,7 +34,7 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="form-group">
-                <%= f.submit 'New Order', class: 'btn btn-primary' %>
+                <%= f.submit 'Pickup Now', class: 'btn btn-success' %>
               </div>
             </div>
           </div>

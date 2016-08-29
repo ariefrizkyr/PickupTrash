@@ -1,4 +1,4 @@
-Your balance : <%= @orders.sum(:price) - @withdraws.sum(:amount) %><br>
+Your balance: <%= @orders.sum(:price) - @withdraws.sum(:amount) %><br>
 
 <% @orders.each do |order| %>
   <div class="col-md-6 col-md-offset-3">
