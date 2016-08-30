@@ -17,16 +17,16 @@
         <strong>Direction:</strong> <%= @order.direction %><br>
         <strong>Phone Number:</strong> <%= @order.phone_number %><br>
         <% if @order.price.present? %>
-          <strong>Price:</strong> <%= @order.price %><br>
+          <strong>Price:</strong> Rp<%= number_with_delimiter(@order.price, delimiter: '.') %><br>
         <% end %>
         <% if @order.weight.present? %>
           <strong>Weight:</strong> <%= @order.weight %><br>
         <% end %>
       </div>
-
-      <hr>
-
-      <%= link_to 'Back', orders_path, class: 'btn btn-success' %>
     </div>
   </div>
+</div>
+
+<div class="text-center">
+  <%= link_to 'Back', orders_path, class: 'btn btn-success' %>
 </div>

@@ -9,8 +9,8 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-sm-12">
-              <strong>Saldo yang tersedia untuk dicairkan:</strong> <%= @orders.sum(:price) - @withdraws.sum(:amount) %><br><br>
-              
+              <strong>Saldo yang tersedia untuk dicairkan:</strong> Rp<%= number_with_delimiter(@orders.sum(:price) - @withdraws.sum(:amount), delimiter: '.') %><br><br>
+
               <div class="form-group">
                 <%= f.text_field :amount, class: 'form-control', placeholder: 'Amount (Masukkan angka saja, contoh: 10000)' %>
               </div>

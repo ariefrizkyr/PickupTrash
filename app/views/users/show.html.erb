@@ -6,7 +6,7 @@
   </div>
 
   <div class="col-xs-8">
-    <strong>Saldo Anda adalah:</strong> <%= @orders.sum(:price) - @withdraws.sum(:amount) %><br>
+    <strong>Saldo Anda adalah:</strong> Rp<%= number_with_delimiter(@orders.sum(:price) - @withdraws.sum(:amount), delimiter: '.') %><br>
     <strong>Anda telah berkontribusi sebanyak</strong>: <%= @orders.sum(:weight) %> kg
 
     <hr>

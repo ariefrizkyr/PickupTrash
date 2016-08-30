@@ -16,7 +16,7 @@
           <%= order.created_at.strftime("%d %B %Y at %H:%M") %><br>
 
           <% if order.price.present? %>
-            <strong>Price:</strong> <%= order.price %><br>
+            <strong>Price:</strong> Rp<%= number_with_delimiter(order.price, delimiter: '.') %><br>
           <% end %>
           <% if order.weight.present? %>
             <strong>Weight:</strong> <%= order.weight %><br>
