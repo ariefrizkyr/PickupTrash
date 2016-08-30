@@ -1,19 +1,17 @@
 <div class="col-md-6 col-md-offset-3 col-sm-12">
   <div class="panel panel-default text-center">
     <div class="panel-heading">
-      <h2>Sisaku</h2>
+      <%= image_tag('logo.png', style: 'width: 80%') %>
     </div>
 
     <div class="panel-body">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-group">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+          <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email' %>
         </div>
 
         <div class="form-group">
-          <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: 'off', class: 'form-control' %>
+          <%= f.password_field :password, autocomplete: 'off', class: 'form-control', placeholder: 'Password' %>
         </div>
 
         <div class="form-group">
@@ -21,7 +19,7 @@
         </div>
 
         <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-          <%= link_to "Forget Password?", new_password_path(resource_name) %><br />
+          <%= link_to "Forgot Password?", new_password_path(resource_name) %><br />
         <% end -%>
       <% end %>
       <hr>
