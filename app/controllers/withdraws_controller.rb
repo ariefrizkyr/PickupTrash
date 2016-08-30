@@ -7,6 +7,9 @@ class WithdrawsController < ApplicationController
 
   def new
     @withdraw = current_user.withdraws.build
+
+    @orders = Order.all
+    @withdraws = Withdraw.all
   end
 
   def create
