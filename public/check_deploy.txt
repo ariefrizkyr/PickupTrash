@@ -1,1 +1,1 @@
-check_deploy.txt
+deploy_successful
