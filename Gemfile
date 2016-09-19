@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise', '~> 3.5.6'
 gem 'paperclip', '~> 4.3.5'
 gem 'administrate', '~> 0.2.2'
+gem 'puma'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
@@ -29,5 +30,4 @@ end
 
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
-  gem 'puma', '~> 3.4'
 end
