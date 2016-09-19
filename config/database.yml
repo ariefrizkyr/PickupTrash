@@ -80,8 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['RDS_DB_NAME'] %>
-  username: <%= ENV['RDS_USERNAME'] %>
-  password: <%= ENV['RDS_PASSWORD'] %>
-  host: <%= ENV['RDS_HOSTNAME'] %> #This is the environment variable created by our Dokku command earlier
-  port: <%= ENV['RDS_PORT'] %>
+  url: <%= ENV['DB_URL'] %>
