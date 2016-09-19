@@ -1,0 +1,14 @@
+{
+  "name": "sisaku",
+  "description": "Sisaku adalah aplikasi pengelolaan sampah",
+  "keywords": [
+    "sisaku",
+    "sampah",
+    "sisaku.co"
+  ],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}
