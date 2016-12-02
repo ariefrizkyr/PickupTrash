@@ -4,7 +4,7 @@
 
     <div class="panel-body">
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
           <div class="text-center">
             <strong>Current Balance:</strong> Rp<%= number_with_delimiter(@orders.sum(:price) - @withdraws.sum(:amount), delimiter: '.') %><br><br>
           </div>
@@ -16,7 +16,7 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
           <div class="form-group text-center">
             <%= f.submit 'Withdraw', class: 'btn btn-green' %>
           </div>

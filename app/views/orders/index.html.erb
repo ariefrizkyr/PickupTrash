@@ -2,7 +2,7 @@
   <div class="col-md-6 col-md-offset-3 text-center">
     <div class="panel panel-default">
       <div class="panel-body">
-        <div class="col-xs-4">
+        <div class="col-md-4">
           <% if order.status.present? %>
             <span class="glyphicon glyphicon-ok"></span><br>
             <label style="background-color: #8DC63F; color: #ffffff">Telah Dijemput</label>
@@ -12,7 +12,7 @@
           <% end %>
         </div>
 
-        <div class="col-xs-8">
+        <div class="col-md-8">
           <%= order.created_at.strftime("%d %B %Y at %H:%M") %><br>
 
           <% if order.price.present? %>
