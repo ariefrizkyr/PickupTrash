@@ -1,4 +1,4 @@
-# Sisaku
-### Dikembangkan oleh [Arief R Ramadhan](https://ariefrizky.com)
+# PickUp Trash
+### Developed by [Arief R Ramadhan](https://ariefrizky.com)
 
-Aplikasi untuk penjemputan dan bank sampah plastik.
+App for calling the agency to pickup the trash in our house and sell it for a balance.
