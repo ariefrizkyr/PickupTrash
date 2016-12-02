@@ -1,35 +1,33 @@
 <%= form_for @withdraw do |f| %>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3 text-center">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3>Request Withdraw</h3>
-        </div>
+    <h2 class="text-center">Request Withdraw</h2>
 
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-sm-12">
-              <strong>Saldo yang tersedia untuk dicairkan:</strong> Rp<%= number_with_delimiter(@orders.sum(:price) - @withdraws.sum(:amount), delimiter: '.') %><br><br>
-
-              <div class="form-group">
-                <%= f.text_field :amount, class: 'form-control', placeholder: 'Amount (Masukkan angka saja, contoh: 10000)' %>
-              </div>
-            </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="text-center">
+            <strong>Current Balance:</strong> Rp<%= number_with_delimiter(@orders.sum(:price) - @withdraws.sum(:amount), delimiter: '.') %><br><br>
           </div>
 
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="form-group">
-                <%= f.submit 'Withdraw', class: 'btn btn-success' %>
-              </div>
-            </div>
+          <div class="form-group">
+            <%= f.text_field :amount, class: 'form-control', placeholder: 'Amount (Numbers only. Ex: 10000)' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group text-center">
+            <%= f.submit 'Withdraw', class: 'btn btn-green' %>
+          </div>
+
+          <hr>
+
+          <div class="text-center">
+            <%= link_to 'Back', bangsaku_path, class: 'btn btn-green' %>
           </div>
         </div>
       </div>
     </div>
   </div>
 <% end %>
-
-<div class="text-center">
-  <%= link_to 'Back', root_path, class: 'btn btn-success' %>
-</div>

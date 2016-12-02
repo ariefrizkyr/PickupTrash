@@ -4,10 +4,10 @@
       <div class="col-sm-12">
         <% if @order.status.present? %>
           <span class="glyphicon glyphicon-ok"></span><br>
-          <label style="background-color: #2ecc71; color: #ffffff">Telah Dijemput</label>
+          <label style="background-color: #8DC63F; color: #ffffff">Telah Dijemput</label>
         <% else %>
           <span class="glyphicon glyphicon-refresh"></span><br>
-          <label style="background-color: #f39c12; color: #ffffff">Sedang Dalam Proses</label>
+          <label style="background-color: #D7DF23; color: #ffffff">Sedang Dalam Proses</label>
         <% end %>
 
         <br>
@@ -20,7 +20,7 @@
           <strong>Price:</strong> Rp<%= number_with_delimiter(@order.price, delimiter: '.') %><br>
         <% end %>
         <% if @order.weight.present? %>
-          <strong>Weight:</strong> <%= @order.weight %><br>
+          <strong>Weight:</strong> <%= @order.weight %> kg<br>
         <% end %>
       </div>
     </div>
@@ -28,5 +28,5 @@
 </div>
 
 <div class="text-center">
-  <%= link_to 'Back', orders_path, class: 'btn btn-success' %>
+  <%= link_to 'Back', orders_path, class: 'btn btn-green' %>
 </div>

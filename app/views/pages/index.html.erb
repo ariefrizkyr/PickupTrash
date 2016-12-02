@@ -11,34 +11,33 @@
         <%= link_to 'Create Profile', new_user_profile_path(current_user), class: 'btn btn-success' %>
       </div>
     <% else %>
-      <div class="row">
-        <div class="col-xs-6">
-          <%= link_to new_order_path, class:'btn btn-success btn-block btn-lg', role: 'button' do %>
-            <span class="glyphicon glyphicon-trash"></span> <br>Pickup Trash</a>
-          <% end %>
-        </div>
-
-        <div class="col-xs-6">
-          <%= link_to orders_path, class: 'btn btn-success btn-block btn-lg', role: 'button' do %>
-            <span class="glyphicon glyphicon-list"></span> <br>Pickup List</a>
-          <% end %>
-        </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <%= link_to bangsaku_path, class:'btn btn-green btn-block btn-lg', role: 'button' do %>
+          <span class="glyphicon glyphicon-trash"></span> <br>Bangsaku</a>
+        <% end %>
       </div>
-      <hr>
 
-      <div class="row">
-        <div class="col-xs-6">
-          <%= link_to new_withdraw_path, class:'btn btn-primary btn-block btn-lg', role: 'button' do %>
-            <span class="glyphicon glyphicon-transfer"></span> <br>Withdraw</a>
-          <% end %>
-        </div>
-
-        <div class="col-xs-6">
-          <%= link_to withdraws_path, class: 'btn btn-primary btn-block btn-lg', role: 'button' do %>
-            <span class="glyphicon glyphicon-credit-card"></span> <br>Withdraw List</a>
-          <% end %>
-        </div>
+      <div class="col-xs-6">
+        <%= link_to '#', class: 'btn btn-green btn-block btn-lg', role: 'button' do %>
+          <span class="glyphicon glyphicon-shopping-cart"></span> <br>Marketku</a>
+        <% end %>
       </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-6">
+        <%= link_to '#', class:'btn btn-green btn-block btn-lg', role: 'button' do %>
+          <span class="glyphicon glyphicon-info-sign"></span> <br>Infoku</a>
+        <% end %>
+      </div>
+
+      <div class="col-xs-6">
+        <%= link_to user_path(current_user), class: 'btn btn-green btn-block btn-lg', role: 'button' do %>
+          <span class="glyphicon glyphicon-user"></span> <br>Profile</a>
+        <% end %>
+      </div>
+    </div>
     <% end %>
   <% else %>
     <div class="panel panel-default text-center">

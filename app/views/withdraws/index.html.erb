@@ -5,10 +5,10 @@
         <div class="col-xs-4">
           <% if withdraw.status.present? %>
             <span class="glyphicon glyphicon-ok"></span><br>
-            <label style="background-color: #2ecc71; color: #ffffff">Telah Dicairkan</label>
+            <label style="background-color: #8DC63F; color: #ffffff">Telah Dicairkan</label>
           <% else %>
             <span class="glyphicon glyphicon-refresh"></span><br>
-            <label style="background-color: #f39c12; color: #ffffff">Sedang Dalam Proses</label>
+            <label style="background-color: #D7DF23; color: #ffffff">Sedang Dalam Proses</label>
           <% end %>
         </div>
         <div class="col-xs-8">
@@ -20,5 +20,5 @@
   </div>
 <% end %>
 <div class="text-center">
-  <%= link_to 'Back', root_path, class: 'btn btn-success' %>
+  <%= link_to 'Back', bangsaku_path, class: 'btn btn-green' %>
 </div>

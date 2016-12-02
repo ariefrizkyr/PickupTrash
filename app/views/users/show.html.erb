@@ -1,13 +1,15 @@
 <div class="row">
-  <div class="col-xs-4 text-center">
-    <%= image_tag @user.profile.avatar.url(:medium), class: 'img-circle', style: 'width: 100%' %>
-    <br><br>
-    <%= link_to 'Edit Profile', edit_user_profile_path(current_user), class: 'btn btn-block btn-success' %>
-  </div>
-
-  <div class="col-xs-8">
-    <strong>Saldo Anda adalah:</strong> Rp<%= number_with_delimiter(@orders.sum(:price) - @withdraws.sum(:amount), delimiter: '.') %><br>
-    <strong>Anda telah berkontribusi sebanyak</strong>: <%= @orders.sum(:weight) %> kg
+  <div class="col-xs-12">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3 text-center">
+        <%= image_tag @user.profile.avatar.url(:medium), class: 'img-circle', style: 'width: 100%' %><br>
+        <strong><%= @user.first_name %> <%= @user.last_name %></strong><br>
+        <strong>Balance:</strong> Rp<%= number_with_delimiter(@orders.sum(:price) - @withdraws.sum(:amount), delimiter: '.') %><br>
+        <strong>Contribution:</strong> <%= @orders.sum(:weight) %> kg
+        <br><br>
+        <%= link_to 'Edit Profile', edit_user_profile_path(current_user), class: 'btn btn-block btn-green' %>
+      </div>
+    </div>
 
     <hr>
 
@@ -20,7 +22,7 @@
 
     <hr>
 
-    <strong>Bank details</strong><br>
+    <strong>Bank Details</strong><br>
     <%= @user.profile.bank_name %><br>
     <%= @user.profile.account_name %><br>
     <%= @user.profile.account_number %>
@@ -30,6 +32,6 @@
 <hr>
 <div class="row">
   <div class="col-xs-12 text-center">
-    <%= link_to 'Back', root_path, class: 'btn btn-success' %>
+    <%= link_to 'Back', root_path, class: 'btn btn-green' %>
   </div>
 </div>

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get '/pricing' => 'pages#pricing'
   get '/termofuse' => 'pages#term'
+  get '/bangsaku' => 'pages#bangsaku'
 
   namespace :admin do
     resources :users
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
 
     root to: "users#index"
   end
-  
+
   devise_for :users
 
   resources :users do

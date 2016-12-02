@@ -1,42 +1,42 @@
 <%= form_for @order do |f| %>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3 text-center">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3>Pickup Trash</h3>
+    <h2 class="text-center">Pickup Trash</h2>
+
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <%= f.text_area :address, class: 'form-control', placeholder: 'Address' %>
+          </div>
         </div>
+      </div>
 
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="form-group">
-                <%= f.text_area :address, class: 'form-control', placeholder: 'Address' %>
-              </div>
-            </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <%= f.text_area :direction, class: 'form-control', placeholder: 'Direction (Details of pickup location)' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <%= f.text_field :phone_number, class: 'form-control', placeholder: 'Phone Number' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group text-center">
+            <%= f.submit 'Pickup Now', class: 'btn btn-green' %>
           </div>
 
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="form-group">
-                <%= f.text_area :direction, class: 'form-control', placeholder: 'Direction (Berikan detail petunjuk arah menuju lokasi penjemputan)' %>
-              </div>
-            </div>
-          </div>
+          <hr>
 
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="form-group">
-                <%= f.text_field :phone_number, class: 'form-control', placeholder: 'Nomor HP' %>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="form-group">
-                <%= f.submit 'Pickup Now', class: 'btn btn-success' %>
-              </div>
-            </div>
+          <div class="text-center">
+            <%= link_to 'Back', bangsaku_path, class: 'btn btn-green' %>
           </div>
         </div>
       </div>

@@ -20,6 +20,15 @@
   @import "font-awesome-sprockets";
   @import "font-awesome";
 
+/* Default Color */
+
+$white: #fff;
+
+$green: #8DC63F;
+$green-darker: #69a21a;
+$yellow: #D7DF23;
+$yellow-darker: #c2ca15;
+
 /* General */
 body {
   padding: 60px 0 0 0;
@@ -27,4 +36,32 @@ body {
 
 .glyphicon {
     font-size: 36px;
+}
+
+.brand {
+   display: inherit;
+   margin: -60px 0 30px 0;
+   padding: 15px 0 15px;
+   text-align: center;
+   background-color: $green;
+}
+
+.brand-logo {
+  width: 150px;
+}
+
+.btn-green {
+  background-color: $green;
+  border-color: $green-darker;
+  color: $white;
+
+  &:hover, &:focus, &:active {
+    background-color: $green-darker;
+    color: $white;
+  }
+}
+
+h2 {
+  margin: 0;
+  color: $green;
 }
