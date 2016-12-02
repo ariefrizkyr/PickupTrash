@@ -2,13 +2,18 @@
   <% if current_user %>
     <% if current_user.profile.blank? %>
       <div class="col-xs-12 text-center">
-        <h3>Selamat datang di aplikasi Sisaku!</h3>
+        <h2 class="text-center">Welcome to Sisaku!</h2>
+        <br>
         <p>
           Dengan aplikasi Sisaku Anda dapat berkontribusi nyata dalam menyelesaikan permasalasahan
           sampah di lingkunganmu. Silakan buat profil Anda sebelum menggunakan aplikasi Sisaku.
         </p>
         <br>
-        <%= link_to 'Create Profile', new_user_profile_path(current_user), class: 'btn btn-success' %>
+        <%= link_to 'Create Profile', new_user_profile_path(current_user), class: 'btn btn-green' %>
+
+        <hr>
+
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
       </div>
     <% else %>
     <div class="row">
