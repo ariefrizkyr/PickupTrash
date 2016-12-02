@@ -40,14 +40,19 @@ body {
 
 .brand {
    display: inherit;
-   margin: -60px 0 25px 0;
+   width: 100%;
    padding: 15px 0 15px;
+   margin: -60px 0 15px 0;
    text-align: center;
    background-color: $green;
 }
 
 .brand-logo {
   width: 150px;
+}
+
+.back-green {
+  background-color: $green;
 }
 
 .btn-green {
