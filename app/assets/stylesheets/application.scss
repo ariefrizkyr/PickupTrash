@@ -32,7 +32,12 @@ $yellow-darker: #c2ca15;
 /* General */
 body {
   padding: 60px 0 0 0;
-  max-height: 100px;
+}
+
+@media ( max-width: 480px ) {
+  body {
+    height: 90%;
+  }
 }
 
 .glyphicon {
