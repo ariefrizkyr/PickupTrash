@@ -66,6 +66,22 @@ body {
   }
 }
 
+.green {
+  color: $green;
+}
+
+.panel-default {
+  & .panel-heading {
+    background-color: $green;
+    color: $white;
+  }
+
+  & .panel-footer {
+    background-color: $green;
+    color: $white;
+  }
+}
+
 h2 {
   margin: 0;
   color: $green;

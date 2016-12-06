@@ -14,4 +14,12 @@ class PagesController < ApplicationController
   def bangsaku
 
   end
+
+  def marketku
+
+  end
+
+  def infoku
+
+  end
 end

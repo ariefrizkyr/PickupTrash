@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/pricing' => 'pages#pricing'
   get '/termofuse' => 'pages#term'
   get '/bangsaku' => 'pages#bangsaku'
+  get '/marketku' => 'pages#marketku'
+  get '/infoku' => 'pages#infoku'
 
   namespace :admin do
     resources :users
